@@ -1,0 +1,7 @@
+.main-header {
+background-color: #32ca1d;
+display: grid;
+grid-template-columns: 1fr 6fr 2fr;
+height: 100%;
+}
+
