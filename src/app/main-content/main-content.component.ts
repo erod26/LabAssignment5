@@ -17,32 +17,33 @@ export class MainContentComponent implements OnInit {
   students: Array<IStudent> = [];
   private scold: string;
 
+  editMode: boolean = false;
   constructor() {
     this.scold = "Getting closer";
-    // this.students[0] = {
-    //   id: 1,
-    //   firstName: 'Eric',
-    //   lastName: 'Rodriguez',
-    //   course: 'Programming'
-    // }
-    // this.students[1] = {
-    //   id: 1,
-    //   firstName: 'Tom',
-    //   lastName: 'Brady',
-    //   course: 'Swimming'
-    // }
-    // this.students[2] = {
-    //   id: 1,
-    //   firstName: 'Mark',
-    //   lastName: 'Zuck',
-    //   course: 'Business'
-    // }
-    // this.students[3] = {
-    //   id: 1,
-    //   firstName: 'Joe',
-    //   lastName: 'Biden',
-    //   course: 'Politics'
-    // }
+    this.students[0] = {
+      id: 1,
+      firstName: 'Eric',
+      lastName: 'Rodriguez',
+      course: 'Programming'
+    }
+    this.students[1] = {
+      id: 1,
+      firstName: 'Tom',
+      lastName: 'Brady',
+      course: 'Swimming'
+    }
+    this.students[2] = {
+      id: 1,
+      firstName: 'Mark',
+      lastName: 'Zuck',
+      course: 'Business'
+    }
+    this.students[3] = {
+      id: 1,
+      firstName: 'Joe',
+      lastName: 'Biden',
+      course: 'Politics'
+    }
   }
   showTease() {
     const haha = document.getElementById('haha');
@@ -59,14 +60,24 @@ export class MainContentComponent implements OnInit {
   }
 
   addStudent() {
+    this.editMode = true;
     const student: IStudent= {
-      id: 1,
-      firstName: 'Mike',
-      lastName: 'Tyson',
-      course: 'Boxing'
+      id: null,
+      firstName: null,
+      lastName: null,
+      course: null
     };
       
     
-    this.students.push(student);
+    // this.students.push(student);
+    // this.students.shift(students); //this will make addstudent appear below biden//
+    this.students.unshift(student);
+  }
+  removeStudent(index: number) {
+    console.log('from removeStudent function index: ', index);
+    this.students.splice(index, 1);
+  }
+  saveStudent() {
+    this.editMode = false;
   }
 }

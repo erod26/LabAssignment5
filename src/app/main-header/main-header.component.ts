@@ -9,10 +9,12 @@ export class MainHeaderComponent implements OnInit {
 
   private firstName: string;
   private lastName: string;
+  private surprise: string;
 
   constructor() {
     this.firstName = "Eric";
     this.lastName = "Rodriguez";
+    this.surprise = "Bonjour!";
   }
 
   showGreeting() {
@@ -25,7 +27,14 @@ export class MainHeaderComponent implements OnInit {
     const banner = document.getElementById('banner');
     banner.innerHTML = 'r1c2';
   }
-
+  showSurprise() {
+    const banner = document.getElementById('banner');
+    banner.innerHTML= this.surprise;
+  }
+  hideSurpise() {
+    const banner = document.getElementById('banner');
+    banner.innerHTML = 'r1c1';
+  }
   ngOnInit() {
   }
 

@@ -17,4 +17,6 @@
 }
 .add-button {
   font-size: bold; 
+  float: right;
+  margin: 10px;
 }
