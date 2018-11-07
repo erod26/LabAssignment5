@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 * {
     margin: 0px;
     padding: 0px;
@@ -12,7 +14,27 @@
   
   .align-center {
     margin: 15px;
-    border: 1px dashed #CCC;
+    /* border: 1px dashed #CCC; */
     color: #FFF;
-  
   }
+  .table-one{
+    width: 100%;
+    border: 1px solid #FFF
+    
+  }
+  
+  .table-one > tbody > tr > td, .table-one > thead > tr > td {
+    border: 1px solid #FFF;
+    min-height: 50px;
+    padding: .5em;
+    
+  
+    
+  }
+  .white-font{
+    color:#FFF
+  }
+  .nav-button {
+    margin-right: 8px !important;
+}
+

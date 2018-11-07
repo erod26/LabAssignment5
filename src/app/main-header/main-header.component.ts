@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'main-header',
@@ -11,11 +12,15 @@ export class MainHeaderComponent implements OnInit {
   private lastName: string;
   private surprise: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.firstName = "Eric";
     this.lastName = "Rodriguez";
-    this.surprise = "Bonjour!";
+    // this.surprise = "Bonjour!";
   }
+
+goToPage(path: string) {
+  this.router.navigate([path]);
+}
 
   showGreeting() {
 
