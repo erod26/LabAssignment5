@@ -44,8 +44,9 @@
           <input [(ngModel)]="student.course" type="text" class="form-control" placeholder="Course" aria-describedby="basic-addon2">
         </td>
         <td>
-          <button (click)="removeStudent(i)" type="button" class="align-right btn btn-default add-button" aria-label="Left Align">
-            X
+          <button (click)="removeStudent(i)" mat-raised-button color="warn" type="button" class="align-right btn btn-default add-button" aria-label="Left Align">
+            <mat-icon>delete</mat-icon>
+
           </button>
         </td>
       </tr>

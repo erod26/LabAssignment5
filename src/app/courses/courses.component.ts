@@ -72,7 +72,7 @@ export class CoursesComponent implements OnInit {
 
     // this.students.push(student);
     // this.students.shift(students); //this will make addstudent appear below biden//
-    this.students.push(student);
+    this.students.unshift(student);
   }
   removeStudent(index: number) {
     console.log('from removeStudent function index: ', index);

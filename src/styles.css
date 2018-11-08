@@ -38,3 +38,11 @@
     margin-right: 8px !important;
 }
 
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  table-layout: fixed;
+}
